@@ -1,6 +1,6 @@
 # divulge
 
-This module provides a function to override default configuration [recursively] with their equivalent underscore delimited uppercase names if they exist in the environment.
+This module provides a function to override default configuration [recursively] with their equivalent non-delimited uppercase names, assuming they exist in the environment.
 
 ### Example
 ``` javascript
@@ -18,4 +18,4 @@ var config = divulge({
 console.log(config.port, config.secret.user, config.secret.pass)
 ```
 
-When executed with `PORT=5000 SECRET_USER='foo' SECRET_PASS='bar'` will print `5000 foo bar` to the console.
+When executed with `PORT=5000 SECRETUSER='foo' SECRETPASS='bar'` will print `5000 foo bar` to the console.
