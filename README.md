@@ -1,6 +1,6 @@
 # divulge
 
-This module provides a function to override default configuration [recursively] with their equivalent: no-space uppercase names if they exist in the environment.
+This module provides a function to override default configuration [recursively] with their equivalent underscore delimited uppercase names if they exist in the environment.
 
 ### Example
 ``` javascript
