@@ -18,4 +18,4 @@ var config = divulge({
 console.log(config.port, config.secret.user, config.secret.pass)
 ```
 
-When executed with `PORT=5000 SECRETUSER='foo' SECRETPASS='bar'` will print `5000 foo bar` to the console.
+When executed with `PORT=5000 SECRETUSER='foo' SECRETPASS='bar'` in the environment, the above program will print `5000 foo bar` to the console.
