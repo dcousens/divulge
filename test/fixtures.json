@@ -1,0 +1,78 @@
+[
+  {
+    "description": "Regular, no defaults",
+    "defaults": {
+      "foo": 1
+    },
+    "prefix": "",
+    "env": {
+      "FOO": 2
+    },
+    "expected": {
+      "foo": 2
+    }
+  },
+  {
+    "description": "Regular, no defaults, extra env",
+    "defaults": {
+      "foo": 1
+    },
+    "prefix": "",
+    "env": {
+      "FOO": 2,
+      "BUZZ": 3
+    },
+    "expected": {
+      "foo": 2
+    }
+  },
+  {
+    "description": "Regular w/ defaults",
+    "defaults": {
+      "foo": 1,
+      "bar": 3
+    },
+    "prefix": "",
+    "env": {
+      "FOO": 2
+    },
+    "expected": {
+      "foo": 2,
+      "bar": 3
+    }
+  },
+  {
+    "description": "Regular, depth 2",
+    "defaults": {
+      "foo": {
+        "bar": 99
+      }
+    },
+    "prefix": "",
+    "env": {
+      "FOOBAR": 2
+    },
+    "expected": {
+      "foo": {
+        "bar": 2
+      }
+    }
+  },
+  {
+    "description": "Custom prefix, depth 2",
+    "defaults": {
+      "foo": {
+        "bar": 99
+      }
+    },
+    "prefix": "__",
+    "env": {
+      "__FOOBAR": 2
+    },
+    "expected": {
+      "foo": {
+        "bar": 2
+      }
+    }
+  }
+]
