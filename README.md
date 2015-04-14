@@ -12,7 +12,7 @@ var config = divulge({
     user: "",
     pass: ""
   }
-})
+}, '', process.env)
 
 // ...
 
