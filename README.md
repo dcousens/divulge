@@ -1,4 +1,5 @@
 # divulge
+[![Version](http://img.shields.io/npm/v/divulge.svg)](https://www.npmjs.org/package/divulge)
 
 This module provides a function to override default configuration [recursively] with their equivalent non-delimited uppercase names, assuming they exist in the environment.
 
