@@ -1,4 +1,4 @@
-module.exports = function divulge(env, obj, prefix) {
+module.exports = function divulge (env, obj, prefix) {
   for (var key in obj) {
     var envKey = prefix + key.toUpperCase()
     var value = obj[key]
