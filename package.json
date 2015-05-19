@@ -1,6 +1,6 @@
 {
   "name": "divulge",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simplified environment expander",
   "main": "index.js",
   "scripts": {
