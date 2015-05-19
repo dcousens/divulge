@@ -1,6 +1,4 @@
-module.exports = function divulge(obj, prefix, env) {
-  env = env || process.env
-
+module.exports = function divulge(env, obj, prefix) {
   for (var key in obj) {
     var envKey = prefix + key.toUpperCase()
     var value = obj[key]
@@ -9,7 +7,7 @@ module.exports = function divulge(obj, prefix, env) {
       obj[key] = env[envKey] || value
 
     } else {
-      divulge(value, envKey, env)
+      divulge(env, value, envKey)
     }
   }
 
