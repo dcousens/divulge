@@ -9,6 +9,8 @@ This module provides a function to override default configuration [recursively] 
 
 ### Example
 
+`divulge(options[, separator], process.env)`
+
 ``` javascript
 var divulge = require('divulge')
 var config = divulge({
@@ -25,6 +27,8 @@ console.log(config.port, config.secret.user, config.secret.pass)
 ```
 
 When executed with `PORT=5000 SECRETUSER='foo' SECRETPASS='bar'` in the environment, the above program will print `5000 foo bar` to the console.
+
+If `_` had been used as a separator, then `SECRET_USER` would have equated to `secret.user` instead.
 
 
 ## LICENSE [MIT](LICENSE)
